@@ -1,7 +1,7 @@
 let words = {};
 $(document).ready(function() {
   ["adjectives", "nouns"].foreach(function(i) {
-    $.ajax("javascripts/lists/" + i + ".txt", {
+    $.ajax("javascripts/words/" + i + ".txt", {
       type:    "GET",
       success: function(text) {
         // `text` is the file text
