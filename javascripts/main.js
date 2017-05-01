@@ -32,6 +32,6 @@ function gen() {
   return genList.join("\n");
 }
 
-$("#genOrders").onClick(function() {
+$("#genOrders").click(function() {
   $("#recipe")[0].innerHTML = gen();
 });
