@@ -1,7 +1,7 @@
 let words = {};
 $(document).ready(function() {
   ["adjectives", "nouns"].forEach(function(i) {
-    $.ajax("javascripts/words/" + i + ".txt", {
+    $.ajax("javascripts/Words/" + i + ".txt", {
       type:    "GET",
       success: function(text) {
         // `text` is the file text
@@ -32,6 +32,6 @@ function gen() {
   return genList.join("\n");
 }
 
-$(document).ready(function() {
+$("#genOrders").onClick(function() {
   $("#recipe")[0].innerHTML = gen();
 });
