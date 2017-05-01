@@ -12,8 +12,8 @@ $(document).ready(function() {
         console.log("something died");
       }
     });
-  });
-}
+  }
+});
 
 console.log(words);
 
