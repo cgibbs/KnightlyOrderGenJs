@@ -1,6 +1,6 @@
 let words = {};
 $(document).ready(function() {
-  for (i in ["adjectives", "nouns"]) {
+  ["adjectives", "nouns"].foreach(function(i) {
     $.ajax("javascripts/lists/" + i + ".txt", {
       type:    "GET",
       success: function(text) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
         console.log("something died");
       }
     });
-  }
+  });
 });
 
 console.log(words);
