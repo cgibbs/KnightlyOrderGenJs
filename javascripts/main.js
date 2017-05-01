@@ -1,4 +1,4 @@
-let words = {};
+words = {};
 $(document).ready(function() {
   ["adjectives", "nouns"].forEach(function(i) {
     $.ajax("javascripts/Words/" + i + ".txt", {
