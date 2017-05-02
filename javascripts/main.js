@@ -13,14 +13,10 @@ $(document).ready(function() {
       }
     });
   });
-  console.log("test3");
   document.getElementById("genOrders").onclick = function() {
-    console.log("test2");
     $("#recipe")[0].innerHTML = gen();
   }
 });
-
-console.log(words);
 
 let getRand = (l) => l[Math.floor(Math.random() * l.length)];
 
@@ -34,7 +30,6 @@ function gen() {
     genList.push("The " + getRand(words["orders"]) + " of the " + (Math.random() * 10 > 9 ? "Most " : "") + getRand(words["adjectives"]) + getRand(words["nouns"]) + "\r\n");
   }
 
-  console.log("test");
   return genList.join("<br/>");
 }
 
