@@ -13,6 +13,11 @@ $(document).ready(function() {
       }
     });
   });
+  console.log("test3");
+  document.getElementById("genOrders").onclick = function() {
+    console.log("test2");
+    $("#recipe")[0].innerHTML = gen();
+  }
 });
 
 console.log(words);
@@ -26,12 +31,12 @@ function gen() {
   genList = [];
 
   for (i = 0; i < 100; i++) {
-    genList.push(getRand(words["orders"] + words["adjectives"] + words["nouns"]));
+    genList.push("The " + getRand(words["orders"]) + " of the " + (Math.random() * 10 > 9 ? "Most " : "") + getRand(words["adjectives"]) + getRand(words["nouns"]) + "\r\n");
   }
 
-  return genList.join("\n");
+  console.log("test");
+  return genList.join("<br/>");
 }
 
-$("#genOrders").click(function() {
-  $("#recipe")[0].innerHTML = gen();
-});
+
+
