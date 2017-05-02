@@ -27,7 +27,7 @@ function gen() {
   genList = [];
 
   for (i = 0; i < 100; i++) {
-    genList.push("The " + getRand(words["orders"]) + " of the " + (Math.random() * 10 > 9 ? "Most " : "") + getRand(words["adjectives"]) + getRand(words["nouns"]) + "\r\n");
+    genList.push("The " + getRand(words["orders"]) + " of the " + (Math.random() * 10 > 9 ? "Most " : "") + getRand(words["adjectives"]) + " " + getRand(words["nouns"]) + "\r\n");
   }
 
   return genList.join("<br/>");
